@@ -1,0 +1,148 @@
+@import url(https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap);
+/* Variables */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+}
+
+/* Mixin */
+/* Styles */
+body {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+  gap: 2rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+body .title__text {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  margin-top: 25px;
+  padding: 25px 0px;
+}
+body .title__text .first__title {
+  color: #a4a4a6;
+  font-weight: lighter;
+}
+body .title__text .second__title {
+  font-family: "Poppins";
+  color: #4c4e61;
+}
+body .title__text p {
+  color: #a4a4a6;
+  width: 500px;
+  text-align: center;
+  font-size: smaller;
+}
+body .container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  justify-content: center;
+}
+body .container h4 {
+  text-align: start;
+  color: #4c4e61;
+}
+body .container .text__cards {
+  text-align: left;
+}
+body .container .left {
+  display: flex;
+  flex-direction: column;
+  width: 320px;
+  height: 240px;
+  align-items: flex-start;
+  padding: 2rem;
+  border-radius: 5px;
+  box-shadow: 0 2px 6px hsl(229deg, 6%, 66%);
+  border-top: cyan;
+  width: 95%;
+}
+body .container .middle {
+  display: flex;
+  flex-direction: column;
+  width: 1100px;
+}
+body .container .middle .middle__up {
+  display: flex;
+  flex-direction: column;
+  width: 320px;
+  height: 240px;
+  align-items: flex-start;
+  padding: 2rem;
+  border-radius: 5px;
+  box-shadow: 0 2px 6px hsl(229deg, 6%, 66%);
+  border-top: red;
+  width: 95%;
+}
+body .container .middle .middle__down {
+  display: flex;
+  flex-direction: column;
+  width: 320px;
+  height: 240px;
+  align-items: flex-start;
+  padding: 2rem;
+  border-radius: 5px;
+  box-shadow: 0 2px 6px hsl(229deg, 6%, 66%);
+  border-top: orangered;
+  width: 95%;
+}
+body .container .right {
+  display: flex;
+  flex-direction: column;
+  width: 320px;
+  height: 240px;
+  align-items: flex-start;
+  padding: 2rem;
+  border-radius: 5px;
+  box-shadow: 0 2px 6px hsl(229deg, 6%, 66%);
+  border-top: blue;
+  width: 95%;
+}
+body .container .all__images {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: auto;
+}
+body .container img {
+  width: 30%;
+}
+
+/* section hover */
+.left:hover {
+  cursor: pointer;
+  transition: 0.3s;
+  transform: scale(1.7);
+  background-color: cyan;
+}
+
+.middle__up:hover {
+  cursor: pointer;
+  transition: 0.3s;
+  transform: scale(1.7);
+  background-color: red;
+}
+
+.middle__down:hover {
+  cursor: pointer;
+  transition: 0.3s;
+  transform: scale(1.7);
+  background-color: orangered;
+}
+
+.right:hover {
+  cursor: pointer;
+  transition: 0.3s;
+  transform: scale(1.7);
+  background-color: blue;
+}
+
+/*# sourceMappingURL=styles.css.map */

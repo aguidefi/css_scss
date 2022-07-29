@@ -1,0 +1,156 @@
+@import url(https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap);
+
+/* Variables */
+$color-title: #a4a4a6;
+$color-title2: #4c4e61;
+$bg-left: cyan;
+$bg-up: red;
+$bg-down: orangered;
+$bg-right: blue;
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
+}
+
+/* Mixin */
+@mixin cards_shape {
+  display: flex;
+  flex-direction: column;
+  width: 320px;
+  height: 240px;
+  align-items: flex-start;
+  padding: 2rem;
+  border-radius: 5px;
+  box-shadow: 0 2px 6px hsl(229, 6%, 66%);
+}
+
+@mixin cards_hover {
+  cursor: pointer;
+  transition: 0.3s;
+  transform: scale(1.7);
+}
+
+@mixin p {
+  width: 95%;
+}
+
+/* Styles */
+body {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+  gap: 2rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+
+  .title__text {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    margin-top: 25px;
+    padding: 25px 0px;
+  
+    .first__title {
+      color: $color-title;
+      font-weight: lighter;
+    }
+    
+    .second__title {
+    font-family: 'Poppins';
+    color: $color-title2;
+    }
+    
+    p {
+      color: $color-title;
+      width: 500px;
+      text-align: center;
+      font-size: smaller;
+    }
+  }
+
+  .container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+      
+    h4 {
+      text-align: start;
+      color: $color-title2;
+    }
+  
+    .text__cards {
+      text-align: left;
+    }
+
+    .left {
+      @include cards_shape();
+      border-top: $bg-left;
+      @include p();
+    }
+    
+    .middle {
+      display: flex;
+      flex-direction: column;
+      width: 1100px;
+    
+      .middle__up {
+        @include cards_shape();
+        border-top: $bg-up;
+        @include p();
+      }
+    
+      .middle__down {
+        @include cards_shape();
+        border-top: $bg-down;
+        @include p();
+      }
+    }
+    
+    .right {
+      @include cards_shape();
+      border-top: $bg-right;
+      @include p();
+    }
+    
+    .all__images {
+      display: flex;
+      justify-content: flex-end;
+      margin-top: auto;
+    }
+    
+    img { 
+      width: 30%;
+    }
+  }
+}
+
+
+/* section hover */
+
+.left:hover {
+  @include cards_hover();
+  background-color: $bg-left;
+}
+
+.middle__up:hover {
+  @include cards_hover();
+  background-color: $bg-up;
+}
+
+.middle__down:hover {
+  @include cards_hover();
+  background-color: $bg-down;
+}
+
+.right:hover {
+  @include cards_hover();
+  background-color: $bg-right;
+}
+
